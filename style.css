@@ -8,7 +8,7 @@
 }
 
 body{
-    background: gray;
+    background: #fff;
 }
 
 /* --------------Nav-bar------------ */
@@ -20,7 +20,7 @@ nav {
     padding: 5px;
     height: 42px;
     align-items: center;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
@@ -176,13 +176,34 @@ nav > div {
 #section-5{
 display: flex;
 margin-top: 1rem;
+align-items: center;
 }
 #section-5>div{
  width: 50%;
 }
 #section-5>div>img{
  width: 100%;
+ height: 500px;
+ object-fit: cover;
 }
+
+/* ----------------------Section-6-------------- */
+#section-6{
+display: flex;
+margin-top: 12px;
+}
+#section-6>div{
+ width: 50%;
+}
+#section-6>div>img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+ }
+ /* -----------------Section-7------------------ */
+ #section-7{
+    margin-top: 5rem;
+ }
 
 
 
