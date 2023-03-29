@@ -1,122 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <title>Sign up Page</title>
-  <style>
-      /* Write all necessery css here  */
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.nav1 {  
-  background-position:center;
-  background-repeat: no-repeat;
-  background-size:cover;  
-}
-.nav1>img{  
-width: 57.5%;
-padding-left: 150px;
-}
-    #signup{
-        /* display: grid;
-        justify-content: center;
-        align-items: center;
-        grid-template-columns: repeat(1,1fr); */
-        /* background-color: grey; */
-        width: 20%;
-        margin-left: 600px;
-        position: absolute;
-        top: 25%;
-        left: 20%;
-        
-        font-family: 'Poppins', sans-serif;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-    }
-    #signup>a{
-        width: 70%;
-        margin-left: 250px;
-        font-family: 'Poppins', sans-serif;
-        text-decoration: none;
-        /* background-color: grey; */
-    }
-    #signup>h1{
-        font-size: 17px;
-        /* background-color: grey; */
-        margin: 20px;
-        color: rgb(36, 32, 32);
-    }
-    form{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        grid-template-columns: repeat(1,1fr);
-        padding: 20px;
-        padding-top: 20px;
-        /* gap: 10px; */
-        /* background-color: grey; */
-        
-    }
-
-    form>p{
-        /* border: 1px red solid; */
-        margin-bottom: -3px;
-        color: grey;
-        font-size: 13px;
-        /* background-color: grey; */
-        color: rgb(40, 33, 33);
-    }
-    .signup>h1{
-        /* background-color: grey; */
-        margin-top: 10px;
-    }
-    form>input{
-        background-color: rgb(182, 178, 178);
-        margin-bottom: 5px;
-        padding: 5px;
-        width: 90%;
-
-        border-radius: 5px;
-        
-    }
-    form>input:nth-child(7){
-        border-radius: 10px;
-        margin-left: 35px;
-        width: 70%;
-        margin-top: 10px;
-        color: black;
-        
-        /* background-color: rgb(86, 83, 83); */
-    }
-    form>div{
-        display: flex;
-        justify-content: space-around;
-    }
-    form>div>a{
-        text-decoration: none;
-        margin-left: 4px;
-        color: rgb(29, 27, 27);
-        
-    }
-    .h1h{
-        position: absolute;
-        font-family: 'Poppins', sans-serif;
-        top: 45%;
-        left: 15%;
-        color: rgb(37, 33, 33);
-        font-size: 20px;
-    }
-    .d {
+  <head>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in Page</title>
+    <style>
+        .d {
 	float: left;
 	overflow: hidden;
 }
@@ -196,6 +87,7 @@ padding-left: 150px;
     }
     .nav a:hover{
         width: 150px;
+        
         text-align: center;
         background-color: rgb(91, 91, 91);
     }
@@ -207,13 +99,110 @@ padding-left: 150px;
         padding-top: 20px;
         
     }
-  </style>
-</head>
+    body, html {
+  height: 100%;
+  margin: 0;
+}
 
-<body>
+.nav1 {
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:cover;  
+}
+.nav1>img{
+   
+   width: 57.5%;
+    padding-left: 150px;
+
+}
+#signin{
+        /* display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(1,1fr); */
+        /* background-color: grey; */
+        width: 20%;
+        margin-left: 600px;
+        position: absolute;
+        top: 35%;
+        left: 20%;
+        
+        font-family: 'Poppins', sans-serif;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    }
+    #signin>a{
+        width: 70%;
+        margin-left: 250px;
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        /* background-color: grey; */
+    }
+    #signin>h1{
+        font-size: 17px;
+        /* background-color: grey; */
+        margin: 20px;
+        color: rgb(29, 25, 25);
+    }
+    form{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(1,1fr);
+        padding: 20px;
+        padding-top: 20px;
+        /* gap: 10px; */
+        /* background-color: grey; */
+        
+    }
+    form>p{
+        /* border: 1px red solid; */
+        margin-bottom: -3px;
+        color: grey;
+        font-size: 13px;
+        /* background-color: grey; */
+        color: rgb(33, 28, 28);
+    }
+    .signin>h1{
+        /* background-color: grey; */
+        margin-top: 10px;
+    }
+    form>input{
+        background-color: rgb(182, 178, 178);
+        margin-bottom: 5px;
+        padding: 5px;
+        width: 90%;
+
+        border-radius: 5px;
+        
+    }
+    form>input:nth-child(4){
+        width: 50%;
+        margin-left: 65px;
+    }
+    form>div{
+        text-align: center;
+    }
+    form>div>a{
+        text-decoration: none;
+        margin-left: 4px;
+        color: rgb(35, 28, 28);
+        
+    }
+    .h1h{
+        position: absolute;
+        font-family: 'Poppins', sans-serif;
+        top: 45%;
+        left: 15%;
+        color: white;
+        font-size: 20px;
+    }
+    </style>
+  </head>
+  <body>
     <nav>
         <div class="nav">
-            <a href="./index.html"><img src="./Mapple.svg"  alt=""></a>
+           <a href="./index.html"><img src="./Mapple.svg"  alt=""></a>
             <div class="d">
                 <button class="d-btn">Store</button>
                 <div class="d-content">
@@ -533,75 +522,64 @@ padding-left: 150px;
         </div>
         
     </nav>
-  <div class="nav1">
-    <!-- <a href="./index.html">Signup</a> -->
-    
+    <div class="nav1">
     <img src="./Mapple.png" alt="">
-  </div>
-  <div id="signup">
-    <h1>Please Enter Your Details</h1>
-    <form>
-        <p>Your Name</p>
-      <input type="text" id="name" placeholder="Name">
-      <!-- <span id="Msg"></span> -->
-      <p>Email</p>
-      <input type="email" id="email" placeholder="Email">
-      <p>Password</p>
-      <input type="password"  id="password" placeholder="Password">
-      <input type="submit" value="Submit" />
-      <div>
-        <a href="./signin.html">Signin</a>
-        <a href="">Forget Password</a>
-      </div>
       
-    </form>
-    
-  </div>
-</body>
-<script>
-  let name = document.getElementById("name")
-    let email = document.getElementById("email")
-    let password = document.getElementById("password")
-  let form = document.querySelector("form");
-    let msg = document.getElementById("msg")
-    
-  let arr = JSON.parse(localStorage.getItem("account-data")) || []
-  
-  // let arr=[]
-  form.addEventListener("submit" , function(e){
-    e.preventDefault();
-    if(name==""){
-        msg.innerHTML="Please Enter Your Name";
-        return false;
-    }
-   
+    </div>
+    <div id="signin">
+      <h1 id="heading">Please Enter Your Details</h1>
+      <form>
+        <input type="name" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email"/>
+        <input type="password" id="password" placeholder="Password"/>
+        <input type="submit" value="Submit" />
+        <div>
+            <a href="./signup.html">Signup</a>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+    let data = JSON.parse(localStorage.getItem("account-data"));
+
+    let form = document.querySelector("form");
+    let heading =document.querySelector("#heading")
+
+    form.addEventListener("submit" , function(e){
+      e.preventDefault();
+
+      // let obj = {
+      //   email : email.value,
+      //   password : passwprd.value
+      // }
+
+      let email = form.email.value;
+      let password = form.password.value;
+        let name = form.name.value
+      // console.log(email,password)
+      let flag = false
+      data.forEach(function(ele) {
+        if(ele.email === email && ele.password === password){
+          flag = true;
+        }
+      });
+      // console.log(flag,email,password)
+      if(flag === true){
         swal({
-  title: "Good job!",
-  text: "Sign Up Sucessful!",
+  title: "Sign in Sucessful!",
+  text: `Welcome to FineApple ${form.name.value}`,
   icon: "success",
   button: "Done",
 });
-    
-    // console.log(name.value,email.value,password.value)
+      }else{
+        swal({
+  title: "Sign in failed!",
+  text: "Wrong Credentials!",
+  icon: "warning",
+  button: "Done!",
+});
 
-    let obj = {
-      name : name.value,
-      email : email.value,
-      password : password.value
-
-    }
-    console.log(obj)
-    arr.push(obj)
-
-    localStorage.setItem("account-data" , JSON.stringify(arr))
-  })
-//   function myfun(){
-//     var a = document.getElementById("name").value;
-//     if(a=""){
-//         document.getElementById("msg").innerHTML="Please Enter Your Name";
-//         return false;
-//     }
-//   }
-</script>
-
+      }
+    })
+  </script>
 </html>
