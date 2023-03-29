@@ -59,18 +59,45 @@ nav > div {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: black;
 }
 .headings>h1{
     font-size: 40px;
+}
+.headings>*{
+    padding: 4px;
 }
 .headings>h2{
     font-size: 25px;
 }
 .headings>.links>a{
-    color: blue;
+    color: #0066CC;
     font-size: 25px;
     font-weight: 500;
+    text-decoration: none;
     margin-right: 10px;
 }
+.links>a:hover{
+  text-decoration: underline;
+}
+
+/* --------------Section-2----------- */
+
+#section-2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+}
+#section-2>.headings{
+    text-align: center;
+    color: #333;
+}
+#section-2>.banner-img{
+  width: 60%;
+  margin: 0 auto;
+}
+#section-2{
+    padding-bottom: 4rem;
+}
+
 
