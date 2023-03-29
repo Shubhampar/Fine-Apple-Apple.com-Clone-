@@ -5,9 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #nav{
+            background-color: gray;
+            /* padding: 10px ; */
+        }
+        nav{
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        nav img{
+            margin: 5px;
+            width: 100px;
+            height: 40px;
+        }
+        .searchBox{
+            padding: 10px 8px;
+            width: 400px;
+            display: flex;
+            background-color: rgb(191, 189, 189);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .searchBox img{
+            width: 10%;
+            height: auto;
+        }
+        .searchBox input{
+            width: 90%;
+            border: none;
+            font-size: 20px;
+            padding: 3px 10px;
+            background-color: transparent;
+        }
+
+    </style>
 </head>
 <body>
-    <nav>
+    <div id="nav">
+        <nav>
         <img src="./image/fineapple.png" alt="">
         <div class="searchBox"> 
             <input type="text" name="search" id="searchInp"
@@ -15,6 +59,7 @@
                 <img src="./image/search.svg" alt="" id="search">
         </div>
     </nav>
+    </div>
 
 </body>
 </html>
