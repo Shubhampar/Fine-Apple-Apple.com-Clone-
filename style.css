@@ -171,6 +171,18 @@ nav > div {
   margin: 0 auto;
 }
 
+/* ----------------------Section-5-------------- */
+
+#section-5{
+display: flex;
+margin-top: 1rem;
+}
+#section-5>div{
+ width: 50%;
+}
+#section-5>div>img{
+ width: 100%;
+}
 
 
 
