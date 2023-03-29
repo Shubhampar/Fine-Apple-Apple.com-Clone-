@@ -101,3 +101,32 @@ nav > div {
 }
 
 
+/* --------------Section-3----------- */
+
+#section-3{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #000;
+}
+#section-3>.headings{
+    text-align: center;
+    color: #fff;
+}
+#section-3 a{
+  font-size: 20px;
+  color: #2997FF;
+}
+#section-3>.headings>h3{
+    color: #CC2127;
+    letter-spacing: 1.5px;
+}
+
+#section-3>.banner-img{
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+
+
