@@ -99,6 +99,20 @@ nav .options{
     font-weight: 500;
     color: #BCBCC0;
 }
+/* ------------------Bag---------------------------- */
+#bag-info{
+    margin-bottom: 1rem;
+}
+#bag-info>p{
+  margin-top: 1rem;
+  color: #bcbcbc;
+}
+#bag-info>p>a{
+  color: #2997FF;
+  margin-right: 1rem;
+  font-size: 14px;
+  font-weight: 400;
+}
 
 /* --------------Section-1------------ */
 
