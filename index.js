@@ -37,3 +37,4 @@ function closeOptions(e){
  e.querySelector('div').style.display = 'none'
  console.log( e.querySelector('div'))
 }   
+
