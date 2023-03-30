@@ -77,6 +77,28 @@ nav .options{
   font-weight: 500;
 }
 
+/* ----------------Search------------------- */
+.fd-column{
+    flex-direction: column;
+}
+
+.search-box{
+ margin-bottom: 1rem;
+ display: flex;
+ align-items: center;
+}
+
+.search-box>input{
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: 1rem;
+    width: 90%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #BCBCC0;
+}
 
 /* --------------Section-1------------ */
 
