@@ -14,4 +14,7 @@ function goto(page){
     else if(page =="logo"){
         window.location.href = '/index.html'
     }
+    else if(page="cart"){
+        window.location.href = '/cart.html'
+    }
 }

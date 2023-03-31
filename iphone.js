@@ -20,19 +20,26 @@ async function FetchData(){
     data.forEach((product) => {
       let card = document.createElement("div")
       let image= document.createElement("img")
+      image.classList.add('prodimg')
       let name = document.createElement("h4")
       let title = document.createElement("p")
       let price = document.createElement("h4")
       
       let camera = document.createElement("img")
+      camera.classList.add('icon')
       let cam_det = document.createElement("p")
       let fiv = document.createElement("img")
+      fiv.classList.add('icon')
       let fiv_de = document.createElement("p")
+      
       let battery = document.createElement("img")
+      battery.classList.add('icon')
       let bat = document.createElement("p")
       let face = document.createElement("img")
+      face.classList.add('icon')
       let face_de = document.createElement("p")
       let sos = document.createElement("img")
+      sos.classList.add('icon')
       let soe_de = document.createElement("p")
       let add_to_cart = document.createElement("button")
       
@@ -86,6 +93,20 @@ timer: 3000,
    
 
   }
+  // function addToCart(id) {
+  //   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  //   let present = cart.filter((e) => e.id == id);
+  //   if (present.length == 0) {
+  //     let product = data.filter((e) => e.id == id);
+  //     product[0].quantity = 1;
+  //     cart.push(product[0]);
+  //     localStorage.setItem("cart", JSON.stringify(cart));
+  //     alert('Item added to the cart')
+  //   } else {
+  //     alert(`Product Already in Cart`);
+  //   }
+  // }
+
   function checkDuplicate(product){
       for(let i=0;i<CartArr.length;i++){
         if(CartArr[i].id===product.id){
@@ -94,3 +115,5 @@ timer: 3000,
       }
       return false
     }
+
+    

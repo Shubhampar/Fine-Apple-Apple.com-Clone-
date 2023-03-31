@@ -26,19 +26,25 @@ async function FetchData(){
       let price = document.createElement("h4")
       let add_to_cart = document.createElement("button")
       let chip = document.createElement("img")
+      chip.classList.add('icon')
       let chip_det = document.createElement("p")
 
       let camera = document.createElement("img")
+      camera.classList.add('icon')
       let camera_det = document.createElement("p")
       let cam = document.createElement("img")
+      cam.classList.add('icon')
       let cam_det = document.createElement("p")
       let face = document.createElement("img")
+      face.classList.add('icon')
       let face_det = document.createElement("p")
       let face_det1 = document.createElement("p")
       let usb = document.createElement("img")
+      usb.classList.add('icon')
       let usb_det = document.createElement("p")
       let usb_det1 = document.createElement("p")
       let conn =document.createElement("img")
+      conn.classList.add('icon')
       let conn_det = document.createElement("p")
       let conn_det1 = document.createElement("p")
       let conn_det2 = document.createElement("p")
@@ -46,6 +52,7 @@ async function FetchData(){
       let conn_det4 = document.createElement("p")
 
       let pen =document.createElement("img");
+      pen.classList.add('icon')
       let pen_det = document.createElement("p")
       let pen_det1 = document.createElement("p")
       

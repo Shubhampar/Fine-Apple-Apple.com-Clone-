@@ -30,11 +30,11 @@ async function FetchData(){
 //     }
 //   }
 
-  let CartArr1 = JSON.parse(localStorage.getItem("cart1"))||[]
-  let Container1 = document.getElementById("product-container")
+  let CartArr = JSON.parse(localStorage.getItem("cart"))||[]
+  let Container = document.getElementById("product-container")
   // let Container1 = document.getElementById("one")
   function DisplayProduct(data){
-    Container1.innerHTML=""
+    Container.innerHTML=""
     data.forEach((product) => {
       let card = document.createElement("div")
       let image= document.createElement("img")
@@ -42,21 +42,27 @@ async function FetchData(){
       let title = document.createElement("p")
       let price = document.createElement("h4")
       let camera = document.createElement("img")
+      camera.classList.add('icon')
       let cam_det = document.createElement("p")
       let fiv = document.createElement("h4")
       let fiv_de = document.createElement("p")
       let battery = document.createElement("h4")
       let bat = document.createElement("p")
       let face = document.createElement("img")
+      face.classList.add('icon')
       let face_de = document.createElement("p")
       let sos = document.createElement("img")
+      sos.classList.add('icon')
       let soe_de = document.createElement("p")
 
       let cam = document.createElement("img")
+      cam.classList.add('icon')
       let cam_de = document.createElement("p")
       let speaker = document.createElement("img")
+      speaker.classList.add('icon')
       let spea = document.createElement("p")
       let tou = document.createElement("img")
+      tou.classList.add('icon')
       let tou_de = document.createElement("p")
       let add_to_cart = document.createElement("button")
 
@@ -93,8 +99,8 @@ timer: 3000,
 });
 
         }else{
-          CartArr1.push({...product,quantity:1})
-          localStorage.setItem("cart1",JSON.stringify(CartArr1))
+          CartArr.push({...product,quantity:1})
+          localStorage.setItem("cart",JSON.stringify(CartArr))
           
           
 swal({
@@ -110,18 +116,18 @@ timer: 3000,
 
       card.append(image,name,title,price,add_to_cart,tit,camera,cam_det,fiv,fiv_de,battery,bat,face,face_de,sos,soe_de,cam,cam_de,speaker,spea,tou,tou_de)
       // card1.append()
-      Container1.append(card);
+      Container.append(card);
       // Container1.append(Container)
     })
 
    
 
   }
-//   function checkDuplicate(product){
-//       for(let i=0;i<CartArr1.length;i++){
-//         if(CartArr1[i].id===product.id){
-//           return true
-//         }
-//       }
-//       return false
-//     }
+  function checkDuplicate(product){
+      for(let i=0;i<CartArr.length;i++){
+        if(CartArr[i].id===product.id){
+          return true
+        }
+      }
+      return false
+    }
