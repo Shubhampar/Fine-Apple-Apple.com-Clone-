@@ -25,6 +25,7 @@
       position: sticky;
       top: 0;
       left: 0;
+      z-index: 2;
   }
   
   nav > div {
@@ -184,4 +185,7 @@ font-weight: 400;
           }
           #product-container>div>button:hover{
               transform: scale(1.3)
+          }
+          .icon{
+            width: 40px;
           }
