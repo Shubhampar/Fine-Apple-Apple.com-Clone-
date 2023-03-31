@@ -88,6 +88,44 @@ nav .options {
   opacity: 0.9;
   width: 38px;
 }
+
+/* ----------------Search------------------- */
+.fd-column{
+  flex-direction: column;
+}
+
+.search-box{
+margin-bottom: 1rem;
+display: flex;
+align-items: center;
+}
+
+.search-box>input{
+  border: none;
+  outline: none;
+  background: none;
+  margin-left: 1rem;
+  width: 90%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #BCBCC0;
+}
+/* ------------------Bag---------------------------- */
+#bag-info{
+  margin-bottom: 1rem;
+}
+#bag-info>p{
+margin-top: 1rem;
+color: #bcbcbc;
+}
+#bag-info>p>a{
+color: #2997FF;
+margin-right: 1rem;
+font-size: 14px;
+font-weight: 400;
+}
+
 /*----------------- product-css here ----------------- */
 body,
 html {
