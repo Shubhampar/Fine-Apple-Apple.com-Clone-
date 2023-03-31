@@ -77,6 +77,19 @@ nav .options{
   font-weight: 500;
 }
 
+#logo>h2{
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#logo img{
+    margin-left: -7px;
+    opacity: 0.9;
+    width: 38px;
+}
+
 /* ----------------Search------------------- */
 .fd-column{
     flex-direction: column;

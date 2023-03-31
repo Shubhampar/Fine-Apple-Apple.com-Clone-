@@ -1,3 +1,4 @@
+
 function goto(page){
     if(page == "mac"){
         window.location.href = '/mac.html'
@@ -15,3 +16,13 @@ function goto(page){
         window.location.href = '/index.html'
     }
 }
+
+
+function expandOptions(e){
+    e.querySelector('div').style.display = 'flex'
+   //  console.log( e.querySelector('div'))
+   }   
+   function closeOptions(e){
+    e.querySelector('div').style.display = 'none'
+    console.log( e.querySelector('div'))
+   }
