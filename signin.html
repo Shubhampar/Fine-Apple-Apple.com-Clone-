@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
     <title>Signin</title>
     <style>
         *{
@@ -16,28 +16,43 @@
         max-width: 35%;
         margin:4% auto;
         padding:15px;
-        box-shadow:
-        
+     }
+    .Container h2,p{
+      color: rgba(39, 36, 36, 0.675);  
      }
     .header-top{
     display: flex;
     justify-content: space-between;
     width:100%;
     height:35px;
+   
     }
     .header-top input{
         width:45%;
         height:35px;
+        border:solid 1px #D6D6D6;
+        outline: none;
+        border-radius:6px;
+        padding:5px;  
     }
 .header-top~input{
     height:35px;
     width:100%;
     margin-bottom:15px;
+    border:solid 1px #D6D6D6;
+        outline: none;
+        border-radius:6px;
+        padding:5px;  
 }
 .header-top~select{
     height:35px;
     width:101%;
     margin-bottom:15px;
+    border:solid 1px #D6D6D6;
+        outline: none;
+        border-radius:6px;
+        padding:5px;  
+        color: rgba(39, 36, 36, 0.675);
 }
 #btn{
     display: block;
@@ -69,8 +84,8 @@
                     <option>South Africa</option>
                     <option>Australia</option>
                 </select>
-                <label >Birthday</label>
-                <input type="date" placeholder="Birthday">
+                <label style="color: rgba(39, 36, 36, 0.675); ">Birthday</label>
+                <input style="color: rgba(39, 36, 36, 0.675)" type="date" placeholder="Birthday">
                 <input type="email" placeholder="name@example.com">
                 <p style="margin-top:-8px;">This will be your new Apple ID.</p>
                 <input type="password" placeholder="Password">

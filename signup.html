@@ -15,6 +15,7 @@
         }
         .Container h1{
             margin:100px;
+            color: rgba(39, 36, 36, 0.675);
         }
         .Container form{
             display: flex;
@@ -22,12 +23,17 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            min-height: 40vh;  
+            min-height: 40vh; 
+           
         }
         form input{
             margin-bottom:15px;
             height:35px;
             width:15%;
+             border:solid 1px #D6D6D6;
+        outline: none;
+        border-radius:6px;
+        padding:5px;   
         }
         #check{
          width: 200px;
@@ -44,8 +50,8 @@
             border: none;
         }
         #checkbox{
-height: 15px;
-width: 15px;
+       height: 15px;
+       width: 15px;
         }
         a{
             text-decoration: none;
@@ -62,10 +68,10 @@ width: 15px;
             <input type="text" placeholder="Apple ID">
             <input type="password" placeholder="Password">
             <div id="check">
-             <input type="checkbox" id="checkbox"><span>Remember Me</span>
+             <input type="checkbox" id="checkbox"><span style="color: rgba(39, 36, 36, 0.675);">Remember Me</span>
             </div>
             <input type="submit" id="submit">
-           <p>Don’t have an Apple ID?<a href="signin.html">Create yours now</a> </a></p>
+           <p style="color: rgba(39, 36, 36, 0.675);">Don’t have an Apple ID?<a href="signin.html">Create yours now</a> </a></p>
          </form>
     </div>
 </body>
