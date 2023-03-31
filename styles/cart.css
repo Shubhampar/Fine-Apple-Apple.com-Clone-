@@ -164,6 +164,7 @@ font-weight: 400;
     display: flex;
     width: 90%;
     margin: auto;
+    color: #333;
   }
   #checkout-details {
     width: 28%;
@@ -171,6 +172,7 @@ font-weight: 400;
   #cart-container {
     width: 68%;
     margin: 0 auto;
+    color: #333;
   }
   #cart-container > div {
     display: flex;

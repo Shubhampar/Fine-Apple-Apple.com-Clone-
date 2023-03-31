@@ -25,6 +25,7 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
 nav > div {
@@ -183,4 +184,7 @@ h1 {
 }
 #product-container > div > h4 {
   padding-bottom: 20px;
+}
+.icon{
+  width: 40px;
 }

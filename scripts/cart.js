@@ -24,7 +24,9 @@ let totalAmount = document.getElementById("total");
 let Cart = JSON.parse(localStorage.getItem("cart"))||[];
     
 let Container = document.getElementById("cart-container");
-function DisplayProduct(data) {
+function DisplayProduct() {
+  NumberOfItems.innerText = Cart.length + " Items";
+  // console.log(Cart.length);
     Container.innerHTML = "";
   Cart.forEach((product) => {
     let card = document.createElement("div")
@@ -33,6 +35,7 @@ function DisplayProduct(data) {
     let title = document.createElement("p")
     let price = document.createElement("h2")
     let remove = document.createElement("button");
+    
     let increment = document.createElement("button");
     let decrement = document.createElement("button");
     let quantity = document.createElement("span")
