@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Payment</title>
+    <link rel="stylesheet" href="styles/payment.css">
+</head>
+
+<body>
+   
+    <div class="container">
+        <!-- --------------------------RIGHT---------------------->
+        <div class="right">
+
+            <!-- -------------------PAYMENTBOX-------------------->
+            <div class="payment-heading">Select Payment Mode</div>
+
+            <div class="payment-container">
+                <div class="payment-box-1">
+                    <div id="box1" class="box selected-tab" onclick="showMethod('box1','credit')"> Credit/ Debit Card
+                    </div>
+                    <div id="box2" class="box" onclick="showMethod('box2','net-banking')"> NetBanking </div>
+                    <div id="box3" class="box" onclick="showMethod('box3','wallet')"> Wallet </div>
+                    <div id="box4" class="box" onclick="showMethod('box4','upi')"> UPI </div>
+                    <div id="box5" class="box" onclick="showMethod('box5','cashOnDelivery')"> Cash on Delivery </div>
+                </div>
+
+
+                <div id="credit" class="payment-box-2 credit selected-box">
+                    <div class="pay-head">Add New Card</div>
+                    <p id="payWarning"></p>
+                    <div class="pay-sub-head">Card Number</div>
+                    <div> <input class="payment-box-input" id="cardNumber" type=""></div>
+                    <div class="pay-sub-head">Name on Card</div>
+                    <div><input class="payment-box-input" id="holderName" type="text"></div>
+                    <div>
+                        <div class="pay-sub-head">Expiration Date</div>
+                        <div class="pay-sub-head">CVV <span>(What's This?)</span></div>
+                    </div>
+
+                    <div>
+                        <div><select>
+                                <option> Month</option>
+                                <option>Jan (1)</otion>
+                                <option>Feb (2)</option>
+                                <option>Mar (3)</option>
+                                <option>Apr (4)</option>
+                                <option>May (5)</option>
+                                <option>june (6)</option>
+                                <option>july (7)</option>
+                                <option>Aug (8)</option>
+                                <option>Sept (9)</option>
+                                <option>Oct (10)</option>
+                                <option>Nov (11)</option>
+                                <option>Dec (12)</option>
+                            </select></div>
+
+                        <div><select name="year" id="year">
+                                <option value="2021">Year</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2021">2025</option>
+                                <option value="2022">2026</option>
+                                <option value="2023">2027</option>
+                                <option value="2024">2028</option>
+                                <option value="2024">2029</option>
+                                <option value="2024">2030</option>
+                            </select></div>
+
+                        <div>
+                            <input id="cvv" type="text">
+                        </div>
+                    </div>
+
+                    <div class="credit-checkbox-input"> <input type="checkbox" value="true" checked="">Save these details
+                        for faster checkout</div>
+
+                    <div> <button onclick="placeOrder('card')" class="btn-payment">PAY SECURELY</button></div>
+                    <div class="pay-head-bottom">By placing this order, you agree to QB's T&C</div>
+
+                </div>
+
+                <div id="net-banking" class="payment-box-2 net-banking ">
+                    <div class="pay-head">Select Bank</div>
+
+                    <div class="pay-img-container">
+                        <div class="pay-col">
+                            <div> <img src="https://assets.ajio.com/static/peImages/HDFC.png" alt=""> </div>
+                            <div> HDFC </div>
+                        </div>
+                        <div class="pay-col">
+                            <div> <img src="https://assets.ajio.com/static/peImages/SBI.png" alt=""> </div>
+                            <div> SBI </div>
+                        </div>
+                        <div class="pay-col">
+                            <div> <img src="https://assets.ajio.com/static/peImages/ICICI.png" alt=""> </div>
+                            <div> ICICI </div>
+                        </div>
+                        <div class="pay-col">
+                            <div> <img src="https://assets.ajio.com/static/peImages/Axis.png" alt=""> </div>
+                            <div> Axis Bank </div>
+                        </div>
+                        <div class="pay-col">
+                            <div> <img src="https://assets.ajio.com/static/peImages/Kotak-Bank.png" alt=""> </div>
+                            <div> Kotak Bank </div>
+                        </div>
+                    </div>
+
+                    <div class="view-expansion">View More Banks</div>
+                    <div><Button onclick="placeOrder()" class="btn-payment">PAY SECURELY</Button></div>
+                    <div class="pay-head-bottom"> By placing this order, you agree to QB's T&C</div>
+                </div>
+
+                <div id="wallet" class="payment-box-2 wallet ">
+                    <div class="pay-head">Select Wallet</div>
+                    <div class="pay-img-container">
+                        <div class="pay-col">
+                            <div><img src="https://assets.ajio.com/static/peImages/Paytm.png" alt=""></div>
+                            <div>Paytm</div>
+                        </div>
+                        <div class="pay-col">
+                            <div><img src="https://assets.ajio.com/static/peImages/Phone-pe.png" alt=""></div>
+                            <div>PhonePe</div>
+                        </div>
+                        <div class="pay-col">
+                            <div><img src="https://assets.ajio.com/static/peImages/Jio-Money.png" alt=""></div>
+                            <div>Jio Money</div>
+                        </div>
+                        <div class="pay-col">
+                            <div><img src="https://assets.ajio.com/static/peImages/Mobikwik.png" alt=""></div>
+                            <div>MOBIKWIK</div>
+                        </div>
+                    </div>
+                    <div class="view-expansion">View More Banks</div>
+                    <div><Button onclick="placeOrder()" class="btn-payment">PAY SECURELY</Button></div>
+                    <div class="pay-head-bottom"> By placing this order, you agree to QB's T&C</div>
+                </div>
+
+                <div id="upi" class="payment-box-2 upi ">
+                    <div class="pay-head">Enter your UPI ID</div>
+
+                    <div class="pay-sub-head">Pay instantly from your bank using your UPI ID.<span
+                            class="view-expansion">How to find UPI ID?</span></div>
+
+                            <div> <input class="payment-box-input" id="upiInput" type="text" placeholder="12345670@upi"></div>
+                            <p id="upiWarning"></p>
+
+                    <div class="credit-checkbox-input"> <input type="checkbox" value="true" checked="">Save this UPI ID
+                        for faster checkout</div>
+
+                    <div><button onclick="placeOrder('upi')" class="btn-payment">PAY SECURELY</button></div>
+
+                    <div class="pay-head-bottom"> By placing this order, you agree to QB's T&C</div>
+                </div>
+
+                <div id="cashOnDelivery" class="payment-box-2 cash-on-delivery ">
+                    <div class="pay-head">Cash on Delivery</div>
+                    <div> For safe, contactless and hassle free delivery, pay using card/wallet/netbanking</div>
+                    <div><button onclick="placeOrder()" class="btn-payment">PLACE ORDER</button></div>
+                    <div class="pay-head-bottom"> By placing this order, you agree to QB's <span
+                            class="view-expansion">T&C </span> </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- -------------------------RIGHT-END-------------------->
+
+        <!----------------------- LEFT  ------------------------>
+
+        <div class="left">
+            <div class="order-summary">
+                <div>Order Summary</div>
+                <div class="summary-amount">
+                    <div>Bag Total</div>
+                    <div id="summary-bag-total">Rs. 950</div>
+                </div>
+                <div class="summary-amount">
+                    <div>Delivery</div>
+                    <div id="summary-delivery">FREE</div>
+                </div>
+                <div class="summary-amount strong">
+                    <div>Order Total</div>
+                    <div id="summary-total">Rs. 950</div>
+                </div>
+                <div class="summary-amount strong">
+                    <div>Amount Payable</div>
+                    <div id="amount-payable">Rs. 950</div>
+                </div>
+            </div>
+        </div>
+
+        <!--------------------- LEFT ENDS ------------------->
+    </div>
+    
+    <script src="scripts/payment.js"></script>
+    <script src="header.js"></script>
+</body>
+
+</html>
