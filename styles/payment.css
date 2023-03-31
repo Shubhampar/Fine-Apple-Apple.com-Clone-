@@ -19,7 +19,6 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-bottom: 80px;
   flex-direction: row;
   margin-top: 1rem;
 }
@@ -88,7 +87,7 @@ body {
 .payment-box-1 .selected-tab {
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
-  color: #cf5b5b;
+  color: #1884FF;
 }
 
 /* ----------------------PAYMENT-BOX-2---------------- */
@@ -129,7 +128,7 @@ body {
 
 .btn-payment {
   color: #fff;
-  background-color: #DF2020;
+  background-color: #1884ff;
   border-radius: 6px;
   text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
   box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
@@ -144,10 +143,7 @@ body {
 }
 .btn-payment:hover {
   cursor: pointer;
-  background-color: #e07070;
-}
-.btn-payment:focus {
-  background-color: #e07070;
+  background-color: #0077ffb4;
 }
 
 .payment-box-input {
@@ -169,12 +165,12 @@ body {
   transition: all 0.3s;
 }
 .payment-box-input:hover {
-  border: 1px solid #DF2020;
+  border: 1px solid #0077ffbd;
   outline: none;
 }
 .payment-box-input:focus {
-  border: 1px solid #df20208a;
-  box-shadow: 0 0 4px #df202057;
+  border: 1px solid #05b4f4b7;
+  box-shadow: 0 0 4px #05b4f467;
   outline: none;
 }
 
@@ -186,10 +182,11 @@ body {
   line-height: 1.5;
   list-style: none;
   font-feature-settings: "tnum";
-  display: inline-block;
   line-height: unset;
   cursor: pointer;
   margin-top: 30px;
+  display: flex;
+  align-items: center;
 }
 /* ---------------------------------------------------------------- */
 /* -----------------------CREDIT-CARD/DEBIT- CARD-------------- */
@@ -222,25 +219,28 @@ body {
   border-radius: 4px;
   margin-right: 10px;
   width: 115px;
-  height: 30px;
+  /* height: 30px; */
   margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .payment-box-2.credit div:nth-of-type(7) select {
   padding: 5px;
-  width: 115px;
+  width: 110px;
   height: 30px;
   color: #333;
   border: none;
 }
 
 .payment-box-2.credit div:nth-of-type(7) input {
-  width: 110px;
-  height: 25px;
+  width: 90px;
+  height: 30px;
   font-size: 16px;
   color: #333;
   outline: none;
   border: none;
+  padding: 10px;
 }
 
 .payment-box-2.credit div:nth-of-type(9) {
@@ -271,7 +271,7 @@ body {
   transition: all ease-in 0.3s;
 }
 .pay-col:hover {
-  border: 2px solid #df20203c;
+  border: 2px solid #1884ff79;
   transform: scale(1.01);
 }
 
