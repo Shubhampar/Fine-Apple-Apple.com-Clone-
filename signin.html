@@ -1,585 +1,90 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in Page</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Signin</title>
     <style>
-        .d {
-	float: left;
-	overflow: hidden;
-}
-.d .d-btn {
-	font-size: 14px;
-	border: none;
-	outline: none;
-	color: #fff;
-	padding: 19px;
-	background: inherit;
-	
-}
-.navbar a:hover, .d:hover .d-btn {
-	background: #5F5F5F;
-}
-.d-content {
-	display: none;
-	position: absolute;
-	background: #f9f9f9;
-	width: 100%;
-	left: 0;
-	z-index: 10;
-}
-.d:hover .d-content {
-	display: block;
-}
-.column {
-	float: left;
-	width: 31.95%;
-	padding: 10px;
-	background: #5F5F5F;
-	height: 350px;
-}
-.column a {
-	display: block;
-	float: none;
-	color: #eee;
-	text-align: left;
-    
-}
-.column h3 {
-	color: #eee;
-	padding: 10px;
-}
-.column a:hover {
-	color: #fff;
-	/* background: #373737; */
-    width: 200px;
-    padding-bottom: 10px;
-    text-align:left;
-    
-}
-.row:after {
-	content: '';
-	display: table;
-	clear: both;
-}
-.nav{
-        display: flex;
-        justify-content: space-around;
-        align-content: center;
-        background-color: grey;
-        color: whitesmoke;
-        font-family: 'Poppins', sans-serif;
-        position: fixed;
-        width: 100%;
-        top: 0;   
-        z-index: 100; 
-    }
-    .nav a{
-        text-decoration: none;
-        /* padding-top: 17px; */
-        color: white;
-    }
-    .nav p{
-        padding-top: 16px;
-    }
-    .nav a:hover{
-        width: 150px;
-        
-        text-align: center;
-        background-color: rgb(91, 91, 91);
-    }
-    .nav img{
-        width: 150px;
-        height: 60px;
-    }
-    .nav i{
-        padding-top: 20px;
-        
-    }
-    body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.nav1 {
-  background-position:center;
-  background-repeat: no-repeat;
-  background-size:cover;  
-}
-.nav1>img{
-   
-   width: 57.5%;
-    padding-left: 150px;
-
-}
-#signin{
-        /* display: grid;
-        justify-content: center;
-        align-items: center;
-        grid-template-columns: repeat(1,1fr); */
-        /* background-color: grey; */
-        width: 20%;
-        margin-left: 600px;
-        position: absolute;
-        top: 35%;
-        left: 20%;
-        
-        font-family: 'Poppins', sans-serif;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-    }
-    #signin>a{
-        width: 70%;
-        margin-left: 250px;
-        font-family: 'Poppins', sans-serif;
-        text-decoration: none;
-        /* background-color: grey; */
-    }
-    #signin>h1{
-        font-size: 17px;
-        /* background-color: grey; */
-        margin: 20px;
-        color: rgb(29, 25, 25);
-    }
-    form{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        grid-template-columns: repeat(1,1fr);
-        padding: 20px;
-        padding-top: 20px;
-        /* gap: 10px; */
-        /* background-color: grey; */
-        
-    }
-    form>p{
-        /* border: 1px red solid; */
-        margin-bottom: -3px;
-        color: grey;
-        font-size: 13px;
-        /* background-color: grey; */
-        color: rgb(33, 28, 28);
-    }
-    .signin>h1{
-        /* background-color: grey; */
-        margin-top: 10px;
-    }
-    form>input{
-        background-color: rgb(182, 178, 178);
-        margin-bottom: 5px;
-        padding: 5px;
-        width: 90%;
-
-        border-radius: 5px;
-        
-    }
-    form>input:nth-child(4){
-        width: 50%;
-        margin-left: 65px;
-    }
-    form>div{
-        text-align: center;
-    }
-    form>div>a{
-        text-decoration: none;
-        margin-left: 4px;
-        color: rgb(35, 28, 28);
-        
-    }
-    .h1h{
-        position: absolute;
-        font-family: 'Poppins', sans-serif;
-        top: 45%;
-        left: 15%;
-        color: white;
-        font-size: 20px;
-    }
-    </style>
-  </head>
-  <body>
-    <nav>
-        <div class="nav">
-           <a href="./index.html"><img src="./Mapple.svg"  alt=""></a>
-            <div class="d">
-                <button class="d-btn">Store</button>
-                <div class="d-content">
-                    <div class="row">
-                        <div class="column">
-                            <h3>Shop</h3>
-                            <a href="">Shop the latest</a>
-                            <a href="">Mac</a>
-                            <a href="">ipad</a>
-                            <a href="">iphone</a>
-                            <a href="">Apple Watch</a>
-                            <a href="">Accessories</a>
-                        </div>
-                        <div class="column">
-                            <h3>Quick links</h3>
-                            <a href="">Order Status</a>
-                            <a href="">Ways to Buy</a>
-                        </div>
-                        <div class="column">
-                            <h3>Shop Speacial Stores</h3>
-                            <a href="">Education</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d">
-                <button class="d-btn">Mac</button>
-                <div class="d-content">
-                    <div class="row">
-                        <div class="column">
-                            <h3>Explore Mac</h3>
-                            <a href="">MacBook Air</a>
-                            <a href="">MacBook Pro</a>
-                            <a href="">iMac</a>
-                            <a href="">Mac mini</a>
-                            <a href="">Mac mini</a>
-                            <a href="">Mac Studio</a>
-                            
-                        </div>
-                        <div class="column">
-                            <h3>Shop Mac</h3>
-                            <a href="">Shop Mac</a>
-                            <a href="">Mac Accessories</a>
-                            <a href="">Ways to Buy</a>
-                        </div>
-                        <div class="column">
-                            <h3>More from Mac</h3>
-                            <a href="">Mac Support</a>
-                            <a href="">macOS Ventura</a>
-                            <a href="">Continuity</a>
-                            <a href="">iCloud</a>
-                            <a href="">Mac for Business</a>
-                            <a href="">Education</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d">
-                <button class="d-btn">ipad</button>
-                <div class="d-content">
-                    <div class="row">
-                        <div class="column">
-                            <h3>Explore Mac</h3>
-                            <a href="">MacBook Air</a>
-                            <a href="">MacBook Pro</a>
-                            <a href="">iMac</a>
-                            <a href="">Mac mini</a>
-                            <a href="">Mac mini</a>
-                            <a href="">Mac Studio</a>
-                            
-                        </div>
-                        <div class="column">
-                            <h3>Shop Mac</h3>
-                            <a href="">Shop Mac</a>
-                            <a href="">Mac Accessories</a>
-                            <a href="">Ways to Buy</a>
-                        </div>
-                        <div class="column">
-                            <h3>More from Mac</h3>
-                            <a href="">Mac Support</a>
-                            <a href="">macOS Ventura</a>
-                            <a href="">Continuity</a>
-                            <a href="">iCloud</a>
-                            <a href="">Mac for Business</a>
-                            <a href="">Education</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <div class="d">
-            <button class="d-btn">iPhone</button>
-            <div class="d-content">
-                <div class="row">
-                    <div class="column">
-                        <h3>Explore iPhone</h3>
-                        <a href="">iPhone 14 Pro</a>
-                        <a href="">iphone 14</a>
-                        <a href="">iPhone 13</a>
-                        <a href="">iPhone 12</a>
-                        <a href="">iPhone SE</a>
-                    </div>
-                    <div class="column">
-                        <h3>Shop iphone</h3>
-                        <a href="">Shop iPhone</a>
-                        <a href="">iPhone Accessories</a>
-                        <a href="">Apple Trade In</a>
-                        <a href="">Ways to Buy</a>
-                    </div>
-                    <div class="column">
-                        <h3>More from iPhone</h3>
-                        <a href="">iPhone Support</a>
-                        <a href="">iOS 16</a>
-                        <a href="">iPhone Privacy</a>
-                        <a href="">iCloud</a>
-                        <a href="">Wallet</a>
-                        <a href="">Siri</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d">
-            <button class="d-btn">Watch</button>
-            <div class="d-content">
-                <div class="row">
-                    <div class="column">
-                        <h3>Explore Mac</h3>
-                        <a href="">MacBook Air</a>
-                        <a href="">MacBook Pro</a>
-                        <a href="">iMac</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac Studio</a>
-                        
-                    </div>
-                    <div class="column">
-                        <h3>Shop Mac</h3>
-                        <a href="">Shop Mac</a>
-                        <a href="">Mac Accessories</a>
-                        <a href="">Ways to Buy</a>
-                    </div>
-                    <div class="column">
-                        <h3>More from Mac</h3>
-                        <a href="">Mac Support</a>
-                        <a href="">macOS Ventura</a>
-                        <a href="">Continuity</a>
-                        <a href="">iCloud</a>
-                        <a href="">Mac for Business</a>
-                        <a href="">Education</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d">
-            <button class="d-btn">AirPods</button>
-            <div class="d-content">
-                <div class="row">
-                    <div class="column">
-                        <h3>Explore Mac</h3>
-                        <a href="">MacBook Air</a>
-                        <a href="">MacBook Pro</a>
-                        <a href="">iMac</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac Studio</a>
-                        
-                    </div>
-                    <div class="column">
-                        <h3>Shop Mac</h3>
-                        <a href="">Shop Mac</a>
-                        <a href="">Mac Accessories</a>
-                        <a href="">Ways to Buy</a>
-                    </div>
-                    <div class="column">
-                        <h3>More from Mac</h3>
-                        <a href="">Mac Support</a>
-                        <a href="">macOS Ventura</a>
-                        <a href="">Continuity</a>
-                        <a href="">iCloud</a>
-                        <a href="">Mac for Business</a>
-                        <a href="">Education</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d">
-            <button class="d-btn">TV & Home</button>
-            <div class="d-content">
-                <div class="row">
-                    <div class="column">
-                        <h3>Explore Mac</h3>
-                        <a href="">MacBook Air</a>
-                        <a href="">MacBook Pro</a>
-                        <a href="">iMac</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac Studio</a>
-                        
-                    </div>
-                    <div class="column">
-                        <h3>Shop Mac</h3>
-                        <a href="">Shop Mac</a>
-                        <a href="">Mac Accessories</a>
-                        <a href="">Ways to Buy</a>
-                    </div>
-                    <div class="column">
-                        <h3>More from Mac</h3>
-                        <a href="">Mac Support</a>
-                        <a href="">macOS Ventura</a>
-                        <a href="">Continuity</a>
-                        <a href="">iCloud</a>
-                        <a href="">Mac for Business</a>
-                        <a href="">Education</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d">
-            <button class="d-btn">Entertainment</button>
-            <div class="d-content">
-                <div class="row">
-                    <div class="column">
-                        <h3>Explore Mac</h3>
-                        <a href="">MacBook Air</a>
-                        <a href="">MacBook Pro</a>
-                        <a href="">iMac</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac Studio</a>
-                        
-                    </div>
-                    <div class="column">
-                        <h3>Shop Mac</h3>
-                        <a href="">Shop Mac</a>
-                        <a href="">Mac Accessories</a>
-                        <a href="">Ways to Buy</a>
-                    </div>
-                    <div class="column">
-                        <h3>More from Mac</h3>
-                        <a href="">Mac Support</a>
-                        <a href="">macOS Ventura</a>
-                        <a href="">Continuity</a>
-                        <a href="">iCloud</a>
-                        <a href="">Mac for Business</a>
-                        <a href="">Education</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d">
-            <button class="d-btn">Accessories</button>
-            <div class="d-content">
-                <div class="row">
-                    <div class="column">
-                        <h3>Explore Mac</h3>
-                        <a href="">MacBook Air</a>
-                        <a href="">MacBook Pro</a>
-                        <a href="">iMac</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac Studio</a>
-                        
-                    </div>
-                    <div class="column">
-                        <h3>Shop Mac</h3>
-                        <a href="">Shop Mac</a>
-                        <a href="">Mac Accessories</a>
-                        <a href="">Ways to Buy</a>
-                    </div>
-                    <div class="column">
-                        <h3>More from Mac</h3>
-                        <a href="">Mac Support</a>
-                        <a href="">macOS Ventura</a>
-                        <a href="">Continuity</a>
-                        <a href="">iCloud</a>
-                        <a href="">Mac for Business</a>
-                        <a href="">Education</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d">
-            <button class="d-btn">Support</button>
-            <div class="d-content">
-                <div class="row">
-                    <div class="column">
-                        <h3>Support</h3>
-                        <a href="">MacBook Air</a>
-                        <a href="">MacBook Pro</a>
-                        <a href="">iMac</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac mini</a>
-                        <a href="">Mac Studio</a>
-                        
-                    </div>
-                    <div class="column">
-                        <h3>Shop Mac</h3>
-                        <a href="">Shop Mac</a>
-                        <a href="">Mac Accessories</a>
-                        <a href="">Ways to Buy</a>
-                    </div>
-                    <div class="column">
-                        <h3>More from Mac</h3>
-                        <a href="">Mac Support</a>
-                        <a href="">macOS Ventura</a>
-                        <a href="">Continuity</a>
-                        <a href="">iCloud</a>
-                        <a href="">Mac for Business</a>
-                        <a href="">Education</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-bag-shopping"></i>
-        
-        
-        </div>
-        
-    </nav>
-    <div class="nav1">
-    <img src="./Mapple.png" alt="">
-      
-    </div>
-    <div id="signin">
-      <h1 id="heading">Please Enter Your Details</h1>
-      <form>
-        <input type="name" id="name" placeholder="Name">
-        <input type="email" id="email" placeholder="Email"/>
-        <input type="password" id="password" placeholder="Password"/>
-        <input type="submit" value="Submit" />
-        <div>
-            <a href="./signup.html">Signup</a>
-        </div>
-      </form>
-    </div>
-  </body>
-  <script>
-    let data = JSON.parse(localStorage.getItem("account-data"));
-
-    let form = document.querySelector("form");
-    let heading =document.querySelector("#heading")
-
-    form.addEventListener("submit" , function(e){
-      e.preventDefault();
-
-      // let obj = {
-      //   email : email.value,
-      //   password : passwprd.value
-      // }
-
-      let email = form.email.value;
-      let password = form.password.value;
-        let name = form.name.value
-      // console.log(email,password)
-      let flag = false
-      data.forEach(function(ele) {
-        if(ele.email === email && ele.password === password){
-          flag = true;
+        *{
+            font-family: 'Open Sans', sans-serif;
         }
-      });
-      // console.log(flag,email,password)
-      if(flag === true){
-        swal({
-  title: "Sign in Sucessful!",
-  text: `Welcome to FineApple ${form.name.value}`,
-  icon: "success",
-  button: "Done",
-});
-      }else{
-        swal({
-  title: "Sign in failed!",
-  text: "Wrong Credentials!",
-  icon: "warning",
-  button: "Done!",
-});
-
-      }
-    })
-  </script>
+     .Container{
+        max-width: 35%;
+        margin:4% auto;
+        padding:15px;
+        box-shadow:
+        
+     }
+    .header-top{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height:35px;
+    }
+    .header-top input{
+        width:45%;
+        height:35px;
+    }
+.header-top~input{
+    height:35px;
+    width:100%;
+    margin-bottom:15px;
+}
+.header-top~select{
+    height:35px;
+    width:101%;
+    margin-bottom:15px;
+}
+#btn{
+    display: block;
+    width:15%;
+    margin: auto;
+    height:35px;
+    border-radius:5px;
+    color: white;
+    background-color: rgba(35, 121, 201, 0.742);
+    border: none;
+}
+    </style>
+    
+</head>
+<body>
+    <div class="Container">
+            <h2>Create Your Apple ID</h2>
+            <form>
+                <div class="header-top">
+                 <input type="text" placeholder="First Name">
+                 <input type="text" placeholder="Last Name">
+                </div>
+                <p style="margin-bottom:-1px;">COUNTRY/REGION</p>
+                <select>
+                    <option>India</option>
+                    <option>United States</option>
+                    <option>United Arab Emirates</option>
+                    <option>New Zealad</option>
+                    <option>South Africa</option>
+                    <option>Australia</option>
+                </select>
+                <label >Birthday</label>
+                <input type="date" placeholder="Birthday">
+                <input type="email" placeholder="name@example.com">
+                <p style="margin-top:-8px;">This will be your new Apple ID.</p>
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Password">
+                <select>
+                    <option>+91 (India)</option>
+                    <option>+1 (United States)</option>
+                    <option>+971 (United Arab Emirates)</option>
+                    <option>+64 (New Zealand)</option>
+                    <option>+27 (South Africa)</option>
+                </select>
+                <input type="number" placeholder="Phone Number">
+                <input type="submit" value="Submit" id="btn">
+        </form>
+    </div>
+</body>
 </html>
