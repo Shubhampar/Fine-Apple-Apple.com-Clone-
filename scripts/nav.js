@@ -53,6 +53,14 @@ let signOutBtn = document.getElementById('sign-out')
 signOutBtn.addEventListener('click',signOut)
 
  function signOut(){
-    localStorage.clear();
+    let status = {login: false, name: ''}
+    localStorage.setItem('status',JSON.stringify(status))
     window.location.reload()
  }
+
+//  ----------------Goto-Cart--------------------------
+
+let bagBtn = document.getElementById('bag')
+bagBtn.addEventListener('click',()=>{
+    window.location.href = '/cart.html'
+})

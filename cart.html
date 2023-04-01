@@ -9,6 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400&family=Montserrat:wght@200;300;400;500;600&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/cart.css" />
     <title>Cart</title>
+    <style>
+        .warning{
+            color:  rgba(255, 0, 0, 0.618);
+            font-weight: 600; 
+            font-size: 12px; 
+            margin-top: 1rem;
+            margin-left: 5px;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -358,6 +368,7 @@
           <p>Apple Handling (Incl. Taxes)</p>
           <p>$37.00</p>
         </div>
+        <p class="warning">Please Sign in</p>
         <button onclick="gotoPayment()">
           <span>Checkout</span>
           <span id="checkout"></span>

@@ -82,3 +82,13 @@ function DisplayProduct() {
   total.textContent='$'+sum
 }
 DisplayProduct()
+
+// ---------------Goto-Payment---------
+function gotoPayment(){
+  let status = JSON.parse(localStorage.getItem('status'))
+  if(status.login){
+    window.location.href = '/payment.html'
+  }else{
+    document.querySelector('.warning').style.display = 'block'
+  }
+}
