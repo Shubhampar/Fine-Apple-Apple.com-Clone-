@@ -35,9 +35,11 @@ function DisplayProduct() {
     let title = document.createElement("p")
     let price = document.createElement("h2")
     let remove = document.createElement("button");
-    
+    remove.classList.add('btn1')
     let increment = document.createElement("button");
+    increment.classList.add('btn')
     let decrement = document.createElement("button");
+    decrement.classList.add('btn')
     let quantity = document.createElement("span")
 
     quantity.textContent=product.quantity
