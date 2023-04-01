@@ -28,7 +28,7 @@ function DisplayProduct() {
   NumberOfItems.innerText = Cart.length + " Items";
   // console.log(Cart.length);
     Container.innerHTML = "";
-  Cart.forEach((product) => {
+    Cart.forEach((product) => {
     let card = document.createElement("div")
     let image= document.createElement("img")
     let name = document.createElement("h2")

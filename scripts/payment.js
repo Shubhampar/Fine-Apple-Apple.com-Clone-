@@ -35,27 +35,51 @@ function showMethod(box,method){
           upiWarning.innerHTML='Enter your UPI Id'
           return
        }
+
+
+       swal("Your order in process!", {
+          buttons: false,
+          timer: 1000,
+          });
        setTimeout(function(){
-           alert('Your order has been placed successfully')
-           // localStorage.setItem('cart',null)
-           window.location.href='index.html'
-       },2000)
+        //    alert('Your order has been placed successfully')
+         swal({
+                title: "Your Order has been placed",
+                text: "keep Shopping",
+                icon: "success",
+                button: "Done",
+                timer: 3000,
+        });
+         localStorage.setItem('cart',null)
+       },1100)
+      
+       setTimeout(function(){
+        window.location.href = 'index.html'
+       },5000)
+
+
+   
    }
    
    //Summary total ----------------------->
    
    function summary_amount() {
+       let cart = JSON.parse(localStorage.getItem("cart"))||[]
+       let sum = 0
+       for(let i=0;i<cart.length;i++){
+        sum+=cart[i].price*cart[i].quantity
+       }
        let data = JSON.parse(localStorage.getItem('total'));
        let bg = document.getElementById('summary-bag-total');
        let del = document.getElementById('summary-delivery');
        let total = document.getElementById('summary-total');
        let amount = document.getElementById('amount-payable');
    
-       bg.innerHTML = `$ ${data}`;
+       bg.innerHTML = `$ ${sum}`;
        
-       total.innerHTML = `$ ${data}`;
+       total.innerHTML = `$ ${sum}`;
    
-       amount.innerHTML = `$ ${data}`;
+       amount.innerHTML = `$ ${sum}`;
    }
    
    summary_amount();
