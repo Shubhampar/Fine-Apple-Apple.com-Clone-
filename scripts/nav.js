@@ -64,3 +64,9 @@ let bagBtn = document.getElementById('bag')
 bagBtn.addEventListener('click',()=>{
     window.location.href = '/cart.html'
 })
+
+// -----------------------Redirecting-After-Sign-in----------------------
+
+function setCurrentPage(page){
+    localStorage.setItem('page',page)
+}

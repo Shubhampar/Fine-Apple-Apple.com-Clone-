@@ -447,8 +447,13 @@
         let status = {login: true, name: user[0].name}
        localStorage.setItem('status',JSON.stringify(status))
        localStorage.setItem('user',JSON.stringify(user[0]))
-       window.location.href = '/index.html'
-     }
+       let page = localStorage.getItem('page') || 'home'
+       if(page=='cart'){
+         window.location.href = '/cart.html'
+        }else{
+           window.location.href = '/index.html'
+       }
+      }
     }
 
 
