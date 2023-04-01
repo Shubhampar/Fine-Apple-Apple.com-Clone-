@@ -20,9 +20,39 @@ function goto(page){
 
 function expandOptions(e){
     e.querySelector('div').style.display = 'flex'
-   //  console.log( e.querySelector('div'))
    }   
    function closeOptions(e){
     e.querySelector('div').style.display = 'none'
-    console.log( e.querySelector('div'))
-   }
+}
+
+// ---------------------Checking-user-is-Sign-in-or-not--------------
+
+  function auth(){
+    let status = JSON.parse(localStorage.getItem('status'))
+    console.log(status)
+    let bagStatus = document.getElementById('bag-status')
+
+    document.getElementById('sign-in').style.display = 'block'
+    document.getElementById('sign-out').style.display = 'none'
+    if(status.login){
+        bagStatus.innerText = status.name
+        document.getElementById('sign-in').style.display = 'none'
+        document.getElementById('sign-out').style.display = 'block'
+    }
+    
+  }
+
+
+  auth()
+
+
+// ------------------Sign-out-------------------
+
+let signOutBtn = document.getElementById('sign-out')
+
+signOutBtn.addEventListener('click',signOut)
+
+ function signOut(){
+    localStorage.clear();
+    window.location.reload()
+ }
