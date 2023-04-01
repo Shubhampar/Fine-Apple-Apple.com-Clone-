@@ -95,7 +95,7 @@ let items = [
   let res = []
   if(query.length>2){
     for(let i=0; i<items.length; i++){
-      if(items[i].name[0] == query[0] && items[i].name[1] == query[1] && items[i].name[2] == query[2]){
+      if(items[i].name[0] == query[0] && items[i].name[1] == query[1]){
         res.push(items[i])
       }
     }
@@ -104,7 +104,7 @@ let items = [
  }
 
  let searchInput = document.getElementById('search-input')
- searchInput.addEventListener('change',(e)=>{
+ searchInput.addEventListener('keyup',(e)=>{
    searchItem(items)
  })
 
