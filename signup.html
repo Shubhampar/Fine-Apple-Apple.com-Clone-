@@ -38,9 +38,6 @@
         }
         #check{
          width: 200px;
-           
-         display:flex;
-         flex-direction: row;
         }
         #submit{
             width:65px ;
@@ -50,10 +47,12 @@
             border-radius:5px;
             border: none;
         }
+
         #checkbox{
-       height: 15px;
-       width: 15px;
+         height: 15px;
+         width: 15px;
         }
+     
         a{
             text-decoration: none;
         }
@@ -394,10 +393,10 @@
             <input type="text" placeholder="Apple ID">
             <input type="password" placeholder="Password">
             <div id="check">
-             <input type="checkbox" id="checkbox"><span style="color: rgba(39, 36, 36, 0.675);">Remember Me</span>
+             <input type="checkbox" id="checkbox"><span style="color: rgba(39, 36, 36, 0.675);"> Remember Me</span>
             </div>
-            <input type="submit" id="submit">
-           <p style="color: rgba(39, 36, 36, 0.675);">Don’t have an Apple ID?<a href="signin.html">Create yours now</a> </a></p>
+            <input style="cursor:pointer" type="submit" id="submit">
+           <p style="color: rgba(39, 36, 36, 0.675);">Don’t have an Apple ID? <a style="color:rgb(0, 76, 255)" href="signin.html"> Create yours now</a> </a></p>
          </form>
     </div>
 </body>
