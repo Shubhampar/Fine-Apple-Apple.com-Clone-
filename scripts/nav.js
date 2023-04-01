@@ -24,8 +24,11 @@ function expandOptions(e){
    function closeOptions(e){
     e.querySelector('div').style.display = 'none'
 }
-
-
+//----------------Event-Propagation--------------------
+ let bagOptions = document.querySelector('#bag > div')
+ bagOptions.addEventListener('click',(e)=>{
+    e.stopPropagation()
+ })
 //  ----------------Goto-Cart--------------------------
 
 let bagBtn = document.getElementById('bag')
@@ -56,10 +59,10 @@ bagBtn.addEventListener('click',()=>{
 // ------------------Sign-out-------------------
 
 let signOutBtn = document.getElementById('sign-out')
+console.log(signOutBtn)
 
 signOutBtn.addEventListener('click',signOut)
-
- function signOut(){
+ function signOut(e){
     let status = {login: false, name: ''}
     localStorage.setItem('status',JSON.stringify(status))
     window.location.reload()
