@@ -150,6 +150,7 @@ font-weight: 400;
     justify-content: space-between;
   }
   #checkout-details > div {
+    margin: 1rem 0;
     display: flex;
     justify-content: space-between;
   }
