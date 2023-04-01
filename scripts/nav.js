@@ -24,12 +24,22 @@ function expandOptions(e){
    function closeOptions(e){
     e.querySelector('div').style.display = 'none'
 }
+//----------------Event-Propagation--------------------
+ let bagOptions = document.querySelector('#bag > div')
+ bagOptions.addEventListener('click',(e)=>{
+    e.stopPropagation()
+ })
+//  ----------------Goto-Cart--------------------------
+
+let bagBtn = document.getElementById('bag')
+bagBtn.addEventListener('click',()=>{
+    window.location.href = '/cart.html'
+})
 
 // ---------------------Checking-user-is-Sign-in-or-not--------------
 
   function auth(){
     let status = JSON.parse(localStorage.getItem('status'))
-    console.log(status)
     let bagStatus = document.getElementById('bag-status')
 
     document.getElementById('sign-in').style.display = 'block'
@@ -49,21 +59,16 @@ function expandOptions(e){
 // ------------------Sign-out-------------------
 
 let signOutBtn = document.getElementById('sign-out')
+console.log(signOutBtn)
 
 signOutBtn.addEventListener('click',signOut)
-
- function signOut(){
+ function signOut(e){
     let status = {login: false, name: ''}
     localStorage.setItem('status',JSON.stringify(status))
     window.location.reload()
  }
 
-//  ----------------Goto-Cart--------------------------
 
-let bagBtn = document.getElementById('bag')
-bagBtn.addEventListener('click',()=>{
-    window.location.href = '/cart.html'
-})
 
 // -----------------------Redirecting-After-Sign-in----------------------
 
