@@ -445,7 +445,7 @@
     }else{
         document.querySelector('.warning').style.display = 'none'
         document.querySelector('.success').style.display = 'block'
-        let status = {login: true, names: user[0].name}
+        let status = {login: true, name: user[0].name}
        localStorage.setItem('status',JSON.stringify(status))
        localStorage.setItem('user',JSON.stringify(user[0]))
        window.location.href = '/index.html'

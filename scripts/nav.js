@@ -23,4 +23,36 @@ function expandOptions(e){
    }   
    function closeOptions(e){
     e.querySelector('div').style.display = 'none'
-   }
+}
+
+// ---------------------Checking-user-is-Sign-in-or-not--------------
+
+  function auth(){
+    let status = JSON.parse(localStorage.getItem('status'))
+    console.log(status)
+    let bagStatus = document.getElementById('bag-status')
+
+    document.getElementById('sign-in').style.display = 'block'
+    document.getElementById('sign-out').style.display = 'none'
+    if(status.login){
+        bagStatus.innerText = status.name
+        document.getElementById('sign-in').style.display = 'none'
+        document.getElementById('sign-out').style.display = 'block'
+    }
+    
+  }
+
+
+  auth()
+
+
+// ------------------Sign-out-------------------
+
+let signOutBtn = document.getElementById('sign-out')
+
+signOutBtn.addEventListener('click',signOut)
+
+ function signOut(){
+    localStorage.clear();
+    window.location.reload()
+ }
