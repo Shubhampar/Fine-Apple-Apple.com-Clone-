@@ -16,6 +16,7 @@
         }
         .Container h1{
             margin:100px;
+            margin-top: 2rem;
             color: rgba(39, 36, 36, 0.675);
         }
         .Container form{
@@ -25,7 +26,6 @@
             align-items: center;
             text-align: center;
             min-height: 40vh; 
-           
         }
         form input{
             margin-bottom:15px;
@@ -58,6 +58,18 @@
         }
         a:hover{
          text-decoration: underline;
+        }
+        .warning{
+            font-size: 12px;
+            color: rgba(255, 0, 0, 0.663);
+            margin-bottom: 1rem;
+            display: none;
+        }
+        .success{
+            font-size: 12px;
+            color: rgba(0, 255, 0, 0.663);
+            margin-bottom: 1rem;
+            display: none;
         }
     </style>
 </head>
@@ -390,8 +402,10 @@
     <div class="Container">
         <h1>Sign in for faster checkout.</h1>
         <form>
-            <input type="text" placeholder="Apple ID">
-            <input type="password" placeholder="Password">
+            <p class="warning">Enter correct id and password</p>
+            <p class="success">Success</p>
+            <input type="text" id="signin-email" placeholder="Apple ID">
+            <input type="password" id="signin-pass" placeholder="Password">
             <div id="check">
              <input type="checkbox" id="checkbox"><span style="color: rgba(39, 36, 36, 0.675);"> Remember Me</span>
             </div>
@@ -400,6 +414,44 @@
          </form>
     </div>
 </body>
-<script src="scripts/index.js"></script>
+<!-- <script src="scripts/index.js"></script> -->
 <script src="scripts/nav.js"></script>
+<script>
+    let url = `https://63f63abd59c944921f6ff45a.mockapi.io/users`
+    let form = document.querySelector('form')
+
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault()
+        fetchUser(url)
+    })
+    
+    async function fetchUser(url){
+     let res = await fetch(url)
+     let data = await res.json()
+     verification(data)
+    }
+
+
+    // fetchUser(url)
+
+    function verification(users){
+     let email = document.getElementById('signin-email').value
+     let pass = document.getElementById('signin-pass').value
+     let  user =  users.filter((e)=> e.email === email && e.password == pass) 
+
+    if(user.length == 0){
+        document.querySelector('.warning').style.display = 'block'
+        document.querySelector('.success').style.display = 'none'
+    }else{
+        document.querySelector('.warning').style.display = 'none'
+        document.querySelector('.success').style.display = 'block'
+        let status = {login: true, names: user[0].name}
+       localStorage.setItem('status',JSON.stringify(status))
+       localStorage.setItem('user',JSON.stringify(user[0]))
+       window.location.href = '/index.html'
+     }
+    }
+
+
+</script>
 </html>

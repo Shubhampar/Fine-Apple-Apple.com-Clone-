@@ -20,9 +20,7 @@ function goto(page){
 
 function expandOptions(e){
     e.querySelector('div').style.display = 'flex'
-   //  console.log( e.querySelector('div'))
    }   
    function closeOptions(e){
     e.querySelector('div').style.display = 'none'
-    console.log( e.querySelector('div'))
    }
