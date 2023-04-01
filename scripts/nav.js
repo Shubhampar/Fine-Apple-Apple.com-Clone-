@@ -25,11 +25,18 @@ function expandOptions(e){
     e.querySelector('div').style.display = 'none'
 }
 
+
+//  ----------------Goto-Cart--------------------------
+
+let bagBtn = document.getElementById('bag')
+bagBtn.addEventListener('click',()=>{
+    window.location.href = '/cart.html'
+})
+
 // ---------------------Checking-user-is-Sign-in-or-not--------------
 
   function auth(){
     let status = JSON.parse(localStorage.getItem('status'))
-    console.log(status)
     let bagStatus = document.getElementById('bag-status')
 
     document.getElementById('sign-in').style.display = 'block'
@@ -58,12 +65,7 @@ signOutBtn.addEventListener('click',signOut)
     window.location.reload()
  }
 
-//  ----------------Goto-Cart--------------------------
 
-let bagBtn = document.getElementById('bag')
-bagBtn.addEventListener('click',()=>{
-    window.location.href = '/cart.html'
-})
 
 // -----------------------Redirecting-After-Sign-in----------------------
 
