@@ -74,12 +74,12 @@ function showMethod(box,method){
        let del = document.getElementById('summary-delivery');
        let total = document.getElementById('summary-total');
        let amount = document.getElementById('amount-payable');
-   
-       bg.innerHTML = `$ ${sum}`;
+       let gst = Math.round((sum/100)*18)
+       bg.innerHTML = `$ ${sum+37+gst}`;
        
-       total.innerHTML = `$ ${sum}`;
+       total.innerHTML = `$ ${sum+37+gst}`;
    
-       amount.innerHTML = `$ ${sum}`;
+       amount.innerHTML = `$ ${sum+37+gst}`;
    }
    
    summary_amount();
