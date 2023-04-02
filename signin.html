@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
-    <title>Signin</title>
+    <title>Sign in</title>
     <style>
         *{
             font-family: 'Open Sans', sans-serif;
@@ -64,6 +64,18 @@
     color: white;
     background-color: rgba(35, 121, 201, 0.742);
     border: none;
+}
+.warning{
+ font-size: 12px;
+ color: rgba(255, 0, 0, 0.507);
+ font-weight: 600;
+ display: none;
+}
+.success{
+ font-size: 12px;
+ color: rgba(0, 255, 0, 0.507);
+ font-weight: 600;
+ display: none;
 }
     </style>
     
@@ -397,8 +409,8 @@
          <h2 style="margin-bottom: 10px;">Create Your Apple ID</h2>
             <form>
                 <div class="header-top">
-                 <input type="text" placeholder="First Name">
-                 <input type="text" placeholder="Last Name">
+                 <input id='fName' type="text" placeholder="First Name">
+                 <input id='lName' type="text" placeholder="Last Name">
                 </div>
                 <p style="margin: 10px 0 0 0;">COUNTRY/REGION</p>
                 <select>
@@ -413,8 +425,8 @@
                 <input style="color: rgba(39, 36, 36, 0.675)" type="date" placeholder="Birthday">
                 <input type="email" placeholder="name@example.com">
                 <p style="margin-top:-8px;">This will be your new Apple ID.</p>
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirm Password">
+                <input id="pass" type="password" placeholder="Password">
+                <input id="c-pass" type="password" placeholder="Confirm Password">
                 <select>
                     <option>+91 (India)</option>
                     <option>+1 (United States)</option>
@@ -422,11 +434,20 @@
                     <option>+64 (New Zealand)</option>
                     <option>+27 (South Africa)</option>
                 </select>
-                <input type="number" placeholder="Phone Number">
+                <input id="phone" type="number" placeholder="Phone Number">
+                <p class="warning">Please enter name</p>
                 <input style="cursor:pointer" type="submit" value="Submit" id="btn">
         </form>
     </div>
 </body>
 <script src="scripts/index.js"></script>
 <script src="scripts/nav.js"></script>
+<script>
+    let fName = document.getElementById('fName')
+    let lName = document.getElementById('lName')
+    let phone = document.getElementById('phone')
+    let pass = document.getElementById('pass')
+    let cPass = document.getElementById('c-pass')
+
+</script>
 </html>
