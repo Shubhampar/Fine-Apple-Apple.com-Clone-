@@ -79,7 +79,13 @@ function DisplayProduct() {
   for(let i=0;i<Cart.length;i++){
     sum+=Cart[i].price*Cart[i].quantity
   }
-  total.textContent='$'+sum
+  let gst = Math.round((sum/100)*18)
+  total.textContent='$'+(sum+37+gst)
+  if(sum==0){
+    total.textContent = ''
+    document.getElementById('handlingCharge').style.display= 'none'
+    document.getElementById('gst').style.display= 'none'
+  }
 }
 DisplayProduct()
 

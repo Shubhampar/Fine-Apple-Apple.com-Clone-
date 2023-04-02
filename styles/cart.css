@@ -310,6 +310,7 @@ border-bottom: 1px rgb(174, 174, 174) solid;
   width: fit-content;
 }
 .btn1{
+  cursor: pointer;
   padding: 8px;
   border-radius: 3px;
   border: none;
