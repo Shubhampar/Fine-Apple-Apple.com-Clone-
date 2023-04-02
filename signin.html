@@ -70,6 +70,7 @@
  color: rgba(255, 0, 0, 0.507);
  font-weight: 600;
  display: none;
+ margin-bottom: 10px;
 }
 .success{
  font-size: 12px;
@@ -409,8 +410,8 @@
          <h2 style="margin-bottom: 10px;">Create Your Apple ID</h2>
             <form>
                 <div class="header-top">
-                 <input id='fName' type="text" placeholder="First Name">
-                 <input id='lName' type="text" placeholder="Last Name">
+                 <input id='fName' type="text" placeholder="First Name" autocomplete="off" spellcheck="false">
+                 <input id='lName' type="text" placeholder="Last Name" autocomplete="off" spellcheck="false">
                 </div>
                 <p style="margin: 10px 0 0 0;">COUNTRY/REGION</p>
                 <select>
@@ -423,19 +424,20 @@
                 </select>
                 <label style="color: rgba(39, 36, 36, 0.675); ">Birthday</label>
                 <input style="color: rgba(39, 36, 36, 0.675)" type="date" placeholder="Birthday">
-                <input type="email" placeholder="name@example.com">
+                <input id="email" type="email" placeholder="name@example.com">
                 <p style="margin-top:-8px;">This will be your new Apple ID.</p>
                 <input id="pass" type="password" placeholder="Password">
                 <input id="c-pass" type="password" placeholder="Confirm Password">
                 <select>
-                    <option>+91 (India)</option>
+                    <option selected>+91 (India)</option>
                     <option>+1 (United States)</option>
                     <option>+971 (United Arab Emirates)</option>
                     <option>+64 (New Zealand)</option>
                     <option>+27 (South Africa)</option>
                 </select>
                 <input id="phone" type="number" placeholder="Phone Number">
-                <p class="warning">Please enter name</p>
+                <p class="warning"></p>
+                <p class="success">Success</p>
                 <input style="cursor:pointer" type="submit" value="Submit" id="btn">
         </form>
     </div>
@@ -445,9 +447,81 @@
 <script>
     let fName = document.getElementById('fName')
     let lName = document.getElementById('lName')
+    let email = document.getElementById('email')
     let phone = document.getElementById('phone')
-    let pass = document.getElementById('pass')
+    let pass =  document.getElementById('pass')
     let cPass = document.getElementById('c-pass')
+    let form = document.querySelector('form')
+    let warn = document.querySelector('.warning')
+    let success = document.querySelector('.success')
+
+    form.addEventListener('submit',(e)=>{
+      e.preventDefault()
+      if(fName.value==''){
+        warn.style.display = 'block'
+        warn.innerText = 'Please type your name'
+        return
+      }
+      if(email.value==''){
+          warn.style.display = 'block'
+          warn.innerText = 'Please type your email'
+          return
+        }
+      if(pass.value==''){
+          warn.style.display = 'block'
+          warn.innerText = 'Please type your password'
+          return
+       }
+      if(cPass.value==''){
+        warn.style.display = 'block'
+        warn.innerText = 'Please type confirm password'
+        return
+      }
+      if(pass.value!=cPass.value){
+        warn.style.display = 'block'
+        warn.innerText = 'password and confirm password not matched'
+        return
+      }
+      if(phone.value==''){
+        warn.style.display = 'block'
+        warn.innerText = 'Please type you Phone Number'
+        return
+      }else{
+        warn.style.display = 'none'
+        warn.innerText = ''
+      }
+      
+      let name = fName.value+' '+lName.value
+      
+      let user = {
+        name,
+        password:pass.value,
+        email: email.value,
+        phone: phone.value,
+        gender: 'male'
+      }
+      console.log(user)
+      postUser(user)
+    })
+
+
+    async function postUser(obj) {
+                try {
+                    await fetch('https://63f63abd59c944921f6ff45a.mockapi.io/users', {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(obj)
+                    });
+                    success.style.display = 'block'
+                    setTimeout(()=>{
+                     location = "./signup.html"
+                    },1000)
+                } catch (error) {
+                    console.log(error)
+                }
+  }
 
 </script>
 </html>
