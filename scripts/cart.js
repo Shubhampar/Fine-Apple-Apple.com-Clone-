@@ -92,7 +92,7 @@ DisplayProduct()
 // ---------------Goto-Payment---------
 function gotoPayment(){
   let status = JSON.parse(localStorage.getItem('status'))
-  if(status.login){
+  if(status && status.login){
     window.location.href = '/payment.html'
   }else{
     document.querySelector('.warning').style.display = 'block'

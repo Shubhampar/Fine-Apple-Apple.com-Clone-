@@ -44,7 +44,7 @@ bagBtn.addEventListener('click',()=>{
 
     document.getElementById('sign-in').style.display = 'block'
     document.getElementById('sign-out').style.display = 'none'
-    if(status.login){
+    if(status && status.login){
         bagStatus.innerText = status.name
         document.getElementById('sign-in').style.display = 'none'
         document.getElementById('sign-out').style.display = 'block'
@@ -59,7 +59,6 @@ bagBtn.addEventListener('click',()=>{
 // ------------------Sign-out-------------------
 
 let signOutBtn = document.getElementById('sign-out')
-console.log(signOutBtn)
 
 signOutBtn.addEventListener('click',signOut)
  function signOut(e){
