@@ -1,9 +1,9 @@
 # judicious-income-4437
 It is collaborative project, We are team of four members.We have worked for 5 days.The names are as follows:-
-1.Shubham Singh(fw24_436)
-2.Shivam Verma(fw25_222)
-3.Sachin Pradhi(fp09_151)
-4.Gaurav Kanaujiya(fw24_487)
+1. Shubham Singh(fw24_436)
+2. Shivam Verma(fw25_222)
+3. Sachin Pradhi(fp09_151)
+4. Gaurav Kanaujiya(fw24_487)
 ## Description:-
 We have basically cloned the website apple.com and we kept the name as fineapple.com and this website basically consists of electronic gadgets like phones ,watches, laptops and tablet which has differnt OS version than normal android.
 
