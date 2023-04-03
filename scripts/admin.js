@@ -254,6 +254,26 @@ document.querySelector("#addIphone").addEventListener("click",()=>{
         <input type="text" id="sosDet" placeholder="SOS Detail">`
         let button=document.createElement("button")
         button.innerText="Add IPhone"
+        button.addEventListener("click",()=>{
+            let obj={
+                image:form.image.value,
+                name:form.name.value,
+                type:"iphone",
+                title:form.title.value,
+                price:form.price.value,
+                camera:form.cameraImg.value,
+                cam_det:form.cameraDetail.value,
+                fiv:form.fiv.value,
+                fiv_de:form.fivDetail,
+                battery:form.battery.value,
+                bat:form.batterydetail.value,
+                face:form.facelock.value,
+                face_de:form.faceLockType.value,
+                sos:form.sos.value,
+                soe_de:form.sosDet.value
+            }
+            updateData(obj)
+        })
         form.append(button)
 })
 document.querySelector("#addMac").addEventListener("click",()=>{
@@ -276,11 +296,38 @@ document.querySelector("#addMac").addEventListener("click",()=>{
         <input type="url" name="cam" id="cam" placeholder="CAM Image">
         <input type="text" id="camDetail" placeholder="Cam Detail">
         <input type="url" name="speaker" id="speaker" placeholder="Speaker Image">
-        <input type="text" placeholder="Speaker Type">
+        <input type="text" placeholder="Speaker Type" id="speakerDet>
         <input type="url" name="" id="touch" placeholder="Touch Image">
         <input type="text" id="touchDetail" placeholder="Touch Detail">`
         let button=document.createElement("button")
-        button.innerText="Add IPhone"
+        button.innerText="Add Mac"
+        button.addEventListener("click",()=>{
+            let obj={
+                image:form.image.value,
+                name:form.name.value,
+                type:"mac",
+                title:form.title.value,
+                price:form.price.value,
+                camera:form.cameraImg.value,
+                cam_det:form.cameraDetail.value,
+                fiv:form.fiv.value,
+                fiv_de:form.fivDetail,
+                battery:form.battery.value,
+                bat:form.batterydetail.value,
+                face:form.facelock.value,
+                face_de:form.faceLockType.value,
+                sos:form.sos.value,
+                soe_de:form.sosDet.value,
+                cam:form.cam.value,
+                cam_de:form.camDetail.value,
+                speaker:form.speaker.value,
+                spea:form.speakerDet.value,
+                tou:form.touch.value,
+                tou_de:form.touchDetail.value
+            }
+            updateData(obj)
+        })
+
         form.append(button)
 })
 document.querySelector("#addIpad").addEventListener("click",()=>{
@@ -349,3 +396,14 @@ document.querySelector("#addWatch").addEventListener("click",()=>{
         button.innerText="Add IPhone"
         form.append(button)
 })
+async function updateData(obj){
+    let res=await fetch("https://63f63abd59c944921f6ff45a.mockapi.io/products",{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(obj)
+    })
+    setTimeout(location.reload(),2)
+    
+}

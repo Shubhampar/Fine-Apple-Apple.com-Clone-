@@ -10,6 +10,7 @@
     margin: auto;
     justify-content: space-around;
     align-items: center;
+    
 }
 #container-nav>div:nth-child(1)>span {
     text-align: center;
@@ -138,7 +139,7 @@
     transform: translateX(-50%);
     z-index:999;
     display: none;
-    background-color: rgb(230, 228, 228);
+    background-color: rgb(110, 108, 108);
     padding: 10px 20px;
 }
 /* #addform input{
@@ -154,12 +155,19 @@
     background-color:rgb(169, 165, 165);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 form{
     display: flex;
     flex-direction: column;
 
+}
+form button{
+    display: block;
+    margin: auto;
+    font-size: 15px;
+    padding: 3px 5px;
+    border-radius: 5px;
 }
 input{
     font-size: 20px;
@@ -173,4 +181,6 @@ input[type="number"]::-webkit-inner-spin-button{
     position: absolute;
     right: 20px;
     top: 20px;
+    font-size: 15px;
+    color: rgb(44, 43, 43);
 }
