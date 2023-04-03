@@ -8,7 +8,7 @@ It is collaborative project, We are team of four members.We have worked for 5 da
 We have basically cloned the website apple.com and we kept the name as fineapple.com and this website basically consists of electronic gadgets like phones ,watches, laptops and tablet which has differnt OS version than normal android.
 
 ## Netlify link:-
-https://unrivaled-axolotl-2e35f0.netlify.app/
+https://vermillion-arithmetic-ac5003.netlify.app/
 
 ## Tech-Stack Used:-
 1. HTML
