@@ -28,3 +28,7 @@ https://vermillion-arithmetic-ac5003.netlify.app/
 + Payment functionality
 + Multple Product page
 + Responsive slideshow
+
+##screenshots
+![apple](https://github.com/Shubhampar/judicious-income-4437/assets/119346050/8697f377-5d41-41c4-9159-829a6ac14da4)
+
